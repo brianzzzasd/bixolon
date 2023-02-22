@@ -173,6 +173,67 @@ const footerNavigation = {
     { name: 'Terms', href: '#' },
   ],
 }
+const posts = [
+  {
+    id: 1,
+    title: 'Boost your conversion rate',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
+    author: {
+      name: 'Michael Foster',
+      role: 'Co-Founder / CTO',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+  },
+  {
+    id: 2,
+    title: 'Boost your conversion rate',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
+    author: {
+      name: 'Michael Foster',
+      role: 'Co-Founder / CTO',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+  },
+  {
+    id: 3,
+    title: 'Boost your conversion rate',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
+    author: {
+      name: 'Michael Foster',
+      role: 'Co-Founder / CTO',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+  },
+
+  // More posts...
+]
 
 const mobileMenuOpen = ref(false)
 </script>
@@ -189,26 +250,42 @@ const mobileMenuOpen = ref(false)
               <div class="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
                 <div class="lg:pr-16">
                   <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                    Focus on what matters
+                    Efficient & reliable printing solutions with Bixolon
                   </h1>
                   <p class="mt-4 text-xl text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    The industry leader in innovative printing technology.
                   </p>
                   <div class="mt-6">
-                    <a href="/products" class="inline-block rounded-md border border-transparent bg-brand-primary py-3 px-8 font-medium text-white hover:opacity-50">Shop Printers</a>
+                    <a href="/products" class="inline-block rounded-md border border-transparent bg-brand-primary py-3 px-8 font-medium text-white hover:opacity-50">See Products</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="h-48 w-full sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:h-full lg:w-1/2">
-            <img src="../../../public/bixolon-content.jpg" alt="" class="h-full w-full object-cover object-center">
+            <img src="../../../public/hero.png" alt="" class="h-full w-full object-cover object-center">
           </div>
         </div>
       </div>
 
       <!-- Collections -->
       <section aria-labelledby="collections-heading" class="bg-gray-100">
+        <!-- Logo Cloud -->
+        <div class="pt-24 pb-12 sm:pt-32 sm:pb-16">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
+              Trusted by the world’s most innovative teams
+            </h2>
+            <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+              <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
+              <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+              <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+              <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+              <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+            </div>
+          </div>
+        </div>
+
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
             <h2 id="collections-heading" class="text-2xl font-bold text-gray-900">
@@ -230,6 +307,58 @@ const mobileMenuOpen = ref(false)
                   {{ collection.description_1 }}
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+              <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                From the blog
+              </h2>
+              <p class="mt-2 text-lg leading-8 text-gray-600">
+                The printing industry’s latest technologies & trends.
+              </p>
+            </div>
+            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              <article v-for="post in posts" :key="post.id" class="flex flex-col items-start justify-between">
+                <div class="relative w-full">
+                  <img :src="post.imageUrl" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                  <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+                </div>
+                <div class="max-w-xl">
+                  <div class="mt-8 flex items-center gap-x-4 text-xs">
+                    <time :datetime="post.datetime" class="text-gray-500">{{ post.date }}</time>
+                    <a :href="post.category.href" class="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100">{{ post.category.title }}</a>
+                  </div>
+                  <div class="group relative">
+                    <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                      <a :href="post.href">
+                        <span class="absolute inset-0" />
+                        {{ post.title }}
+                      </a>
+                    </h3>
+                    <p class="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
+                      {{ post.description }}
+                    </p>
+                  </div>
+                  <div class="relative mt-8 flex items-center gap-x-4">
+                    <img :src="post.author.imageUrl" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+                    <div class="text-sm leading-6">
+                      <p class="font-semibold text-gray-900">
+                        <a :href="post.author.href">
+                          <span class="absolute inset-0" />
+                          {{ post.author.name }}
+                        </a>
+                      </p>
+                      <p class="text-gray-600">
+                        {{ post.author.role }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
