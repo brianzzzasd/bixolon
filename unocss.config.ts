@@ -30,6 +30,14 @@ export default defineConfig({
       },
     }),
   ],
+  theme: {
+    colors: {
+      brand: {
+        primary: '#f48127',
+        secondary: '#484440',
+      },
+    },
+  },
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
