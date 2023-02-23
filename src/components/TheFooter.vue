@@ -180,8 +180,8 @@ const mobileMenuOpen = ref(false)
             <div class="md:flex md:justify-center">
               <img src="../../../public/bixolon_orange_logo.jpeg" alt="" class="h-5 w-auto">
             </div>
-            <div class="mx-auto mt-16 max-w-5xl xl:grid xl:grid-cols-2 xl:gap-8">
-              <div class="grid grid-cols-3 gap-8 xl:col-span-2">
+            <div class="mx-auto mt-16 max-w-5xl xl:grid xl:grid-cols-1 xl:gap-8">
+              <div class="grid grid-cols-2 gap-8 xl:col-span-2">
                 <div class="space-y-12 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
                   <div>
                     <h3 class="text-sm font-medium text-gray-900">
@@ -226,59 +226,97 @@ const mobileMenuOpen = ref(false)
                     </ul>
                   </div>
                 </div>
-                <div class="space-y-12 md:grid md:grid-cols-1 md:gap-8 md:space-y-0 text-gray-900">
-                  <div>
-                    <div class="text-brand-primary font-bold text-lg">
-                      BIXOLON America Inc.
+              </div>
+              <div class="space-y-4 md:grid md:grid-cols-5 md:gap-8 md:space-y-0 text-gray-900">
+                <div>
+                  <div class="text-brand-primary font-bold text-lg">
+                    BIXOLON America Inc.
+                  </div>
+                  <div class="mt-1 text-gray-500 text-sm">
+                    <div class="mt-0.5">
+                      2575 W 237th St, Torrance, CA 90505
                     </div>
-                    <div class="mt-1 text-gray-500 text-sm">
-                      <div class="mt-0.5">
-                        2575 W 237th St, Torrance, CA 90505
-                      </div>
-                      <div class="mt-0.5">
-                        Tel +1 858 764 4580
-                      </div>
-                      <div class="mt-0.5 text-xs text-gray-400">
-                        <a href="bixolonusa.com">bixolonusa.com</a>
-                      </div>
+                    <div class="mt-0.5">
+                      Tel +1 858 764 4580
+                    </div>
+                    <div class="mt-0.5 text-xs text-gray-400">
+                      <a href="bixolonusa.com">bixolonusa.com</a>
                     </div>
                   </div>
-                  <div>
-                    <div class="text-brand-primary font-bold text-lg">
-                      BIXOLON Co., Ltd.
+                </div>
+                <div>
+                  <div class="text-brand-primary font-bold text-lg">
+                    BIXOLON Co., Ltd.
+                  </div>
+                  <div class="mt-1 text-gray-500 text-sm">
+                    <div class="mt-0.5">
+                      5F, IDIS Tower, 344 Pangyo-ro
                     </div>
-                    <div class="mt-1 text-gray-500 text-sm">
-                      <div class="mt-0.5">
-                        5F, IDIS Tower, 344 Pangyo-ro
-                      </div>
-                      <div class="mt-0.5">
-                        Bundang-gu, Seongnam-si, Gyeonggi-do Republic of Korea, 13493
-                      </div>
-                      <div class="mt-0.5">
-                        Tel +82 31 218 5500
-                      </div>
-                      <div class="mt-0.5 text-xs text-gray-400">
-                        <a href="bixolon.com">bixolon.com</a>
-                      </div>
+                    <div class="mt-0.5">
+                      Bundang-gu, Seongnam-si, Gyeonggi-do Republic of Korea, 13493
+                    </div>
+                    <div class="mt-0.5">
+                      Tel +82 31 218 5500
+                    </div>
+                    <div class="mt-0.5 text-xs text-gray-400">
+                      <a href="bixolon.com">bixolon.com</a>
                     </div>
                   </div>
-                  <div>
-                    <div class="text-brand-primary font-bold text-lg">
-                      BIXOLON Europe GmbH
+                </div>
+                <div>
+                  <div class="text-brand-primary font-bold text-lg">
+                    BIXOLON Europe GmbH
+                  </div>
+                  <div class="mt-1 text-gray-500 text-sm">
+                    <div class="mt-0.5">
+                      Tiefenbroicher Weg 35, 40472
                     </div>
-                    <div class="mt-1 text-gray-500 text-sm">
-                      <div class="mt-0.5">
-                        Tiefenbroicher Weg 35, 40472
-                      </div>
-                      <div class="mt-0.5">
-                        Düsseldorf, Germany
-                      </div>
-                      <div class="mt-0.5">
-                        Tel +49-211-68-78-54-0
-                      </div>
-                      <div class="mt-0.5 text-xs text-gray-400">
-                        <a href="bixoloneu.com">bixoloneu.com</a>
-                      </div>
+                    <div class="mt-0.5">
+                      Düsseldorf, Germany
+                    </div>
+                    <div class="mt-0.5">
+                      Tel +49-211-68-78-54-0
+                    </div>
+                    <div class="mt-0.5 text-xs text-gray-400">
+                      <a href="bixoloneu.com">bixoloneu.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-brand-primary font-bold text-lg">
+                    BIXOLON MEXICO
+                  </div>
+                  <div class="mt-1 text-gray-500 text-sm">
+                    <div class="mt-0.5">
+                      Torre Diana, 23 FL, Office 2392, Río Lerma 232, Cuauhtémoc
+                    </div>
+                    <div class="mt-0.5">
+                      México City, Mexico 06500
+                    </div>
+                    <div class="mt-0.5">
+                      Tel +521 55 8852-7880
+                    </div>
+                    <div class="mt-0.5 text-xs text-gray-400">
+                      <a href="www.es.bixolon.com">es.bixolon.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-brand-primary font-bold text-lg">
+                    BIXOLON MEA
+                  </div>
+                  <div class="mt-1 text-gray-500 text-sm">
+                    <div class="mt-0.5">
+                      Jafza view 18, Jebel Ali Free Zone,
+                    </div>
+                    <div class="mt-0.5">
+                      Dubai, UAE
+                    </div>
+                    <div class="mt-0.5">
+                      Tel +971 4 222 6480
+                    </div>
+                    <div class="mt-0.5 text-xs text-gray-400">
+                      <a href="bixolon.com/ar/">bixolon.com/ar/</a>
                     </div>
                   </div>
                 </div>
