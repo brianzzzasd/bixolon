@@ -173,6 +173,43 @@ const footerNavigation = {
     { name: 'Terms', href: '#' },
   ],
 }
+
+const events = [
+  {
+    id: 1,
+    title: 'EuroShop',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    imageUrl:
+      '../../../blog_1.jpeg',
+    date: 'Jan  1, 2023',
+    datetime: '2020-01-23',
+  },
+  {
+    id: 2,
+    title: 'Internoga',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    imageUrl:
+      '../../../blog_2.jpeg',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+  },
+  {
+    id: 3,
+    title: 'SiTL',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    imageUrl:
+      '../../../blog_3.jpeg',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+  },
+]
+
 const posts = [
   {
     id: 1,
@@ -356,6 +393,33 @@ const mobileMenuOpen = ref(false)
                       </p>
                     </div>
                   </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="text-center mx-auto lg:mx-0 w-auto">
+              <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Events
+              </h2>
+            </div>
+            <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              <article v-for="event in events" :key="event.id" class="flex max-w-xl flex-col items-start justify-between">
+                <div class="flex items-center gap-x-4 text-xs">
+                  <time :datetime="event.datetime" class="text-gray-500">{{ event.date }}</time>
+                </div>
+                <div class="group relative">
+                  <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                    <a :href="event.href">
+                      <span class="absolute inset-0" />
+                      {{ event.title }}
+                    </a>
+                  </h3>
+                  <p class="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
+                    {{ event.description }}
+                  </p>
                 </div>
               </article>
             </div>
