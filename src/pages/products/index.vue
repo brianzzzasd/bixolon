@@ -8,7 +8,6 @@ const products = [
     description_3: 'Premium',
     href: '/products/1',
     imageSrc: '../../../public/printer_1.jpeg',
-    price: '$35',
   },
   {
     id: 2,
@@ -18,7 +17,6 @@ const products = [
     description_3: 'Direct Thermal Printer',
     href: '/products/2',
     imageSrc: '../../../public/printer_2.jpeg',
-    price: '$35',
   },
   {
     id: 3,
@@ -28,7 +26,6 @@ const products = [
     description_3: 'Compact and Economical',
     href: '/products/3',
     imageSrc: '../../../public/printer_3.jpeg',
-    price: '$35',
   },
   {
     id: 4,
@@ -38,7 +35,6 @@ const products = [
     description_3: 'Printer for mPOS',
     href: '/products/4',
     imageSrc: '../../../public/printer_4.jpeg',
-    price: '$35',
   },
   {
     id: 5,
@@ -48,7 +44,6 @@ const products = [
     description_3: 'Ideal for use with electronic scales',
     href: '/products/5',
     imageSrc: '../../../public/printer_5.jpeg',
-    price: '$35',
   },
   {
     id: 6,
@@ -58,7 +53,6 @@ const products = [
     description_3: 'Direct Thermal Printer',
     href: '/products/6',
     imageSrc: '../../../public/printer_6.jpeg',
-    price: '$35',
   },
   {
     id: 7,
@@ -68,7 +62,6 @@ const products = [
     description_3: 'mPOS-ible Receipt Printer',
     href: '/products/7',
     imageSrc: '../../../public/printer_7.jpeg',
-    price: '$35',
   },
   {
     id: 8,
@@ -78,7 +71,6 @@ const products = [
     description_3: 'Receipt Printer',
     href: '/products/8',
     imageSrc: '../../../public/printer_8.jpeg',
-    price: '$35',
   },
 ]
 </script>
@@ -113,9 +105,6 @@ const products = [
                 {{ product.description_3 }}
               </p>
             </div>
-            <p class="text-sm font-medium text-gray-900">
-              {{ product.price }}
-            </p>
           </div>
         </div>
       </div>

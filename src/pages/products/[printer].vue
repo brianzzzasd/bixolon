@@ -300,17 +300,17 @@ const license = {
             <div class="border-b border-gray-200">
               <TabList class="-mb-px flex space-x-8">
                 <Tab v-slot="{ selected }" as="template">
-                  <button class="whitespace-nowrap border-b-2 py-6 text-sm font-medium" :class="[selected ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300']">
+                  <button class="whitespace-nowrap border-b-2 py-6 text-sm font-medium focus:outline-none" :class="[selected ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300']">
                     Customer Reviews
                   </button>
                 </Tab>
                 <Tab v-slot="{ selected }" as="template">
-                  <button class="whitespace-nowrap border-b-2 py-6 text-sm font-medium" :class="[selected ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300']">
+                  <button class="whitespace-nowrap border-b-2 py-6 text-sm font-medium focus:outline-none" :class="[selected ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300']">
                     FAQ
                   </button>
                 </Tab>
                 <Tab v-slot="{ selected }" as="template">
-                  <button class="whitespace-nowrap border-b-2 py-6 text-sm font-medium" :class="[selected ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300']">
+                  <button class="whitespace-nowrap border-b-2 py-6 text-sm font-medium focus:outline-none" :class="[selected ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300']">
                     License
                   </button>
                 </Tab>

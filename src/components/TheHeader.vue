@@ -269,7 +269,7 @@ const mobileMenuOpen = ref(false)
                     <div class="flex h-full justify-center space-x-8">
                       <Popover v-for="(category, categoryIdx) in navigation.categories" :key="category.name" v-slot="{ open }" class="flex">
                         <div class="relative flex">
-                          <PopoverButton class="relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out" :class="[open ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800']">
+                          <PopoverButton class="relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out focus:outline-none" :class="[open ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800']">
                             {{ category.name }}
                           </PopoverButton>
                         </div>
@@ -279,7 +279,7 @@ const mobileMenuOpen = ref(false)
                             <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
 
                             <div class="relative bg-white w-1/2">
-                              <div class="mx-auto max-w-7xl px-8">
+                              <div class="mx-auto max-w-7xl px-8 bg-gray-100">
                                 <div class="grid grid-cols-1 items-start gap-y-10 gap-x-8 pt-10 pb-12">
                                   <div class="grid grid-cols-2 gap-y-10 gap-x-8">
                                     <div>
@@ -321,12 +321,6 @@ const mobileMenuOpen = ref(false)
                     <span class="sr-only">Open menu</span>
                     <Bars3Icon class="h-6 w-6" aria-hidden="true" />
                   </button>
-
-                  <!-- Search -->
-                  <a href="#" class="ml-2 p-2 text-gray-400 hover:text-gray-500">
-                    <span class="sr-only">Search</span>
-                    <MagnifyingGlassIcon class="h-6 w-6" aria-hidden="true" />
-                  </a>
                 </div>
 
                 <!-- Logo (lg-) -->
@@ -337,12 +331,17 @@ const mobileMenuOpen = ref(false)
 
                 <div class="flex flex-1 items-center justify-end">
                   <div class="flex items-center lg:ml-8">
-                    <div class="flex space-x-8">
+                    <div class="flex space-x-8 items-center">
                       <div class="hidden lg:flex">
-                        <a href="#" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
-                          <span class="sr-only">Search</span>
-                          <MagnifyingGlassIcon class="h-6 w-6" aria-hidden="true" />
-                        </a>
+                        <div class="w-full sm:max-w-xs">
+                          <label for="search" class="sr-only">Search</label>
+                          <div class="relative">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                              <MagnifyingGlassIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+                            </div>
+                            <input id="search" name="search" class="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:border-gray-300 focus:text-gray-900 focus:placeholder-gray-400 focus:outline-none focus:ring-1 sm:text-sm" placeholder="Search" type="search">
+                          </div>
+                        </div>
                       </div>
 
                       <div class="flex">
@@ -352,16 +351,6 @@ const mobileMenuOpen = ref(false)
                         </a>
                       </div>
                     </div>
-
-                    <!-- <span class="mx-4 h-6 w-px bg-gray-200 lg:mx-6" aria-hidden="true" /> -->
-
-                    <!-- <div class="flow-root">
-                      <a href="#" class="group -m-2 flex items-center p-2">
-                        <ShoppingCartIcon class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
-                        <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                        <span class="sr-only">items in cart, view bag</span>
-                      </a>
-                    </div> -->
                   </div>
                 </div>
               </div>
