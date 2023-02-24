@@ -42,5 +42,5 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  safelist: 'prose prose-sm m-auto text-left w-1/3 w-2/5'.split(' '),
 })
