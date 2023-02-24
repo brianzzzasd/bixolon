@@ -365,7 +365,7 @@ const mobileMenuOpen = ref(false)
                     <div class="flex space-x-8 items-center">
                       <Combobox v-model="selectedPerson" as="div">
                         <div class="relative mt-1">
-                          <ComboboxInput class="w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-10 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary sm:text-sm" :display-value="(person) => person?.name" @change="query = $event.target.value" />
+                          <ComboboxInput class="w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-10 shadow-sm focus:border-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-200 sm:text-sm" :display-value="(person) => person?.name" @change="query = $event.target.value" />
                           <ComboboxButton class="absolute inset-y-0 left-0 flex items-center rounded-r-md px-2 focus:outline-none">
                             <MagnifyingGlassIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
                           </ComboboxButton>
