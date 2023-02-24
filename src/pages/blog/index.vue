@@ -7,7 +7,7 @@ const posts = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '../../../blog_1.jpeg',
+      '../../../blog_hq.jpeg',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Product Launch', href: '#' },

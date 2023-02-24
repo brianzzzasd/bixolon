@@ -218,7 +218,7 @@ const posts = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '../../../blog_1.jpeg',
+      '../../../blog_hq.jpeg',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Product Launch', href: '/blog' },
@@ -361,7 +361,7 @@ const mobileMenuOpen = ref(false)
               <article v-for="post in posts" :key="post.id" class="flex flex-col items-start justify-between">
                 <div class="relative w-full">
                   <a :href="post.href">
-                    <img :src="post.imageUrl" alt="" class="w-full rounded-2xl bg-gray-100 object-cover">
+                    <img :src="post.imageUrl" alt="" class="w-full rounded-2xl bg-gray-100 object-cover min-h-50">
                     <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                   </a>
                 </div>
