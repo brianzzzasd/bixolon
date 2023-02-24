@@ -182,7 +182,7 @@ const events = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '../../../blog_1.jpeg',
+      '../../public/event_1.jpeg',
     date: 'Jan  1, 2023',
     datetime: '2020-01-23',
   },
@@ -193,7 +193,7 @@ const events = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '../../../blog_2.jpeg',
+      '../../public/event_2.png',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
   },
@@ -204,7 +204,7 @@ const events = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '../../../blog_3.jpeg',
+      '../../public/event_3.png',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
   },
@@ -281,7 +281,7 @@ const mobileMenuOpen = ref(false)
       <div class="flex flex-col border-b border-gray-200 lg:border-0">
         <div class="relative">
           <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-gray-100 lg:block" />
-          <div class="relative bg-white">
+          <div class="relative bg-gray-100">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
               <div class="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
                 <div class="lg:pr-16">
@@ -305,7 +305,7 @@ const mobileMenuOpen = ref(false)
       </div>
 
       <!-- Collections -->
-      <section aria-labelledby="collections-heading" class="bg-gray-100">
+      <section aria-labelledby="collections-heading" class="bg-white">
         <!-- Logo Cloud -->
         <div class="pt-24 pb-12 sm:pt-32 sm:pb-16">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -322,7 +322,7 @@ const mobileMenuOpen = ref(false)
           </div>
         </div>
 
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border-t border-gray-200">
           <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
             <h2 id="collections-heading" class="text-2xl font-bold text-gray-900">
               Products
@@ -347,7 +347,7 @@ const mobileMenuOpen = ref(false)
           </div>
         </div>
 
-        <div class="bg-white py-24 sm:py-32">
+        <div class="bg-white py-24 sm:py-32 border-t border-gray-200">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
               <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -400,7 +400,7 @@ const mobileMenuOpen = ref(false)
             </div>
           </div>
         </div>
-        <div class="bg-gray-100 py-24 sm:py-32">
+        <div class="bg-white py-24 sm:py-32 border-t border-gray-200">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="text-center mx-auto lg:mx-0 w-auto">
               <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -413,9 +413,12 @@ const mobileMenuOpen = ref(false)
                   <time :datetime="event.datetime" class="text-gray-500">{{ event.date }}</time>
                 </div>
                 <div class="group relative">
+                  <div class="mt-3">
+                    <img :src="event.imageUrl" class="h-12 w-auto">
+                  </div>
                   <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                     <a :href="event.href">
-                      <span class="absolute inset-0" />
+                      <span class="absolute inset-0 text-brand-primary" />
                       {{ event.title }}
                     </a>
                   </h3>
