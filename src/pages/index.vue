@@ -214,18 +214,18 @@ const posts = [
   {
     id: 1,
     title: 'Boost your conversion rate',
-    href: '#',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
       '../../../blog_1.jpeg',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Product Launch', href: '#' },
+    category: { title: 'Product Launch', href: '/blog' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
-      href: '#',
+      href: '/blog',
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -233,18 +233,18 @@ const posts = [
   {
     id: 2,
     title: 'Boost your conversion rate',
-    href: '#',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
       '../../../blog_2.jpeg',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Event', href: '#' },
+    category: { title: 'Event', href: '/blog' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
-      href: '#',
+      href: '/blog',
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -252,18 +252,18 @@ const posts = [
   {
     id: 3,
     title: 'Boost your conversion rate',
-    href: '#',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
       '../../../blog_3.jpeg',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Tech & Trend', href: '#' },
+    category: { title: 'Tech & Trend', href: '/blog' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
-      href: '#',
+      href: '/blog',
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -360,8 +360,10 @@ const mobileMenuOpen = ref(false)
             <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               <article v-for="post in posts" :key="post.id" class="flex flex-col items-start justify-between">
                 <div class="relative w-full">
-                  <img :src="post.imageUrl" alt="" class="w-full rounded-2xl bg-gray-100 object-cover">
-                  <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+                  <a :href="post.href">
+                    <img :src="post.imageUrl" alt="" class="w-full rounded-2xl bg-gray-100 object-cover">
+                    <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+                  </a>
                 </div>
                 <div class="max-w-xl">
                   <div class="mt-8 flex items-center gap-x-4 text-xs">
