@@ -1,6 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import {
+  Combobox,
+  ComboboxButton,
+  ComboboxInput,
+  ComboboxLabel,
+  ComboboxOption,
+  ComboboxOptions,
   Dialog,
   DialogPanel,
   Popover,
@@ -16,7 +22,32 @@ import {
   TransitionRoot,
 } from '@headlessui/vue'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+import { CheckIcon, ChevronDownIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
+
+const people = [
+  {
+    id: 1,
+    name: 'Leslie Alexander',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    id: 2,
+    name: 'Alexander Leslie ',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+]
+
+const query = ref('')
+const selectedPerson = ref(null)
+const filteredPeople = computed(() =>
+  query.value === ''
+    ? people
+    : people.filter((person) => {
+      return person.name.toLowerCase().includes(query.value.toLowerCase())
+    }),
+)
 
 const currencies = ['CAD', 'USD', 'AUD', 'EUR', 'GBP']
 const navigation = {
@@ -332,18 +363,27 @@ const mobileMenuOpen = ref(false)
                 <div class="flex flex-1 items-center justify-end">
                   <div class="flex items-center lg:ml-8">
                     <div class="flex space-x-8 items-center">
-                      <div class="hidden lg:flex">
-                        <div class="w-full sm:max-w-xs">
-                          <label for="search" class="sr-only">Search</label>
-                          <div class="relative">
-                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                              <MagnifyingGlassIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
-                            </div>
-                            <input id="search" name="search" class="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:border-gray-300 focus:text-gray-900 focus:placeholder-gray-400 focus:outline-none focus:ring-1 sm:text-sm" placeholder="Search" type="search">
-                          </div>
-                        </div>
-                      </div>
+                      <Combobox v-model="selectedPerson" as="div">
+                        <div class="relative mt-1">
+                          <ComboboxInput class="w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-10 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary sm:text-sm" :display-value="(person) => person?.name" @change="query = $event.target.value" />
+                          <ComboboxButton class="absolute inset-y-0 left-0 flex items-center rounded-r-md px-2 focus:outline-none">
+                            <MagnifyingGlassIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+                          </ComboboxButton>
 
+                          <ComboboxOptions v-if="filteredPeople.length > 0" class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                            <ComboboxOption v-for="person in filteredPeople" :key="person.id" v-slot="{ active, selected }" :value="person" as="template">
+                              <li class="relative cursor-default select-none py-2 pl-3 pr-9" :class="[active ? 'bg-gray-600 text-white' : 'text-gray-900']">
+                                <div class="flex items-center">
+                                  <img :src="person.imageUrl" alt="" class="h-6 w-6 flex-shrink-0 rounded-full">
+                                  <span class="ml-3 truncate" :class="[selected && 'font-semibold']">
+                                    {{ person.name }}
+                                  </span>
+                                </div>
+                              </li>
+                            </ComboboxOption>
+                          </ComboboxOptions>
+                        </div>
+                      </Combobox>
                       <div class="flex">
                         <a href="#" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
                           <span class="sr-only">Account</span>
