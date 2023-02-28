@@ -89,7 +89,7 @@ const collections = [
     description_2: 'Feature-Rich',
     description_3: 'Premium',
     href: '/products/1',
-    imageSrc: '/public/printer_1.jpeg',
+    imageSrc: '/printer_1.jpeg',
     price: '$35',
   },
   {
@@ -99,7 +99,7 @@ const collections = [
     description_2: 'Label and Receipt',
     description_3: 'Direct Thermal Printer',
     href: '/products/2',
-    imageSrc: '/public/printer_2.jpeg',
+    imageSrc: '/printer_2.jpeg',
     price: '$35',
   },
   {
@@ -109,7 +109,7 @@ const collections = [
     description_2: 'Linerless Printer',
     description_3: 'Compact and Economical',
     href: '/products/3',
-    imageSrc: '/public/printer_3.jpeg',
+    imageSrc: '/printer_3.jpeg',
     price: '$35',
   },
 ]
@@ -182,7 +182,7 @@ const events = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '/public/event_1.jpeg',
+      '/event_1.jpeg',
     date: 'Jan  1, 2023',
     datetime: '2020-01-23',
   },
@@ -193,7 +193,7 @@ const events = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '/public/event_2.png',
+      '/event_2.png',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
   },
@@ -204,7 +204,7 @@ const events = [
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
-      '/public/event_3.png',
+      '/event_3.png',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
   },
