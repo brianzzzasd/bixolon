@@ -296,42 +296,52 @@ const mobileMenuOpen = ref(false)
 
                 <div class="hidden h-full lg:flex">
                   <!-- Mega menus -->
-                  <PopoverGroup class="ml-8">
-                    <div class="flex h-full justify-center space-x-8">
-                      <Popover v-for="(category, categoryIdx) in navigation.categories" :key="category.name" v-slot="{ open }" class="flex">
+                  <PopoverGroup class="hidden lg:block lg:flex-1 lg:self-stretch">
+                    <div class="flex h-full space-x-8">
+                      <Popover v-for="category in navigation.categories" :key="category.name" v-slot="{ open }" class="flex">
                         <div class="relative flex">
-                          <PopoverButton class="relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out focus:outline-none" :class="[open ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800']">
+                          <PopoverButton class="relative z-10 flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out" :class="[open ? 'text-indigo-600' : 'text-gray-700 hover:text-gray-800']">
                             {{ category.name }}
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 transition-colors duration-200 ease-out sm:mt-5 sm:translate-y-px sm:transform" :class="[open ? 'bg-indigo-600' : '']" aria-hidden="true" />
                           </PopoverButton>
                         </div>
 
-                        <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 -translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-1">
-                          <PopoverPanel class="absolute inset-x-0 top-full text-gray-500 sm:text-sm w-2/5">
+                        <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100" leave-to-class="opacity-0">
+                          <PopoverPanel class="absolute inset-x-0 top-full">
                             <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                            <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
 
                             <div class="relative bg-white">
-                              <div class="mx-auto max-w-7xl px-8 bg-gray-100">
-                                <div class="grid grid-cols-1 items-start gap-y-10 gap-x-8 pt-10 pb-12">
-                                  <div class="grid grid-cols-2 gap-y-10 gap-x-8">
-                                    <div>
-                                      <p :id="`desktop-featured-heading-${categoryIdx}`" class="font-medium text-gray-900">
-                                        Featured
-                                      </p>
-                                      <ul role="list" :aria-labelledby="`desktop-featured-heading-${categoryIdx}`" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
-                                        <li v-for="item in category.featured" :key="item.name" class="flex">
-                                          <a :href="item.href" class="hover:text-gray-800">{{ item.name }}</a>
-                                        </li>
-                                      </ul>
+                              <div class="mx-auto max-w-7xl px-8">
+                                <div class="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
+                                  <div class="grid grid-cols-2 grid-rows-1 gap-8 text-sm">
+                                    <div v-for="(item, itemIdx) in category.featured" :key="item.name" class="group aspect-w-1 aspect-h-1 relative overflow-hidden rounded-md bg-gray-100" :class="[itemIdx === 0 ? 'aspect-w-2 col-span-2' : '']">
+                                      <img :src="item.imageSrc" :alt="item.imageAlt" class="object-cover object-center group-hover:opacity-75">
+                                      <div class="flex flex-col justify-end">
+                                        <div class="bg-white bg-opacity-60 p-4 text-sm">
+                                          <a :href="item.href" class="font-medium text-gray-900">
+                                            <span class="absolute inset-0" aria-hidden="true" />
+                                            {{ item.name }}
+                                          </a>
+                                          <p aria-hidden="true" class="mt-0.5 text-gray-700 sm:mt-1">
+                                            Shop now
+                                          </p>
+                                        </div>
+                                      </div>
                                     </div>
-                                    <div>
-                                      <p id="desktop-categories-heading" class="font-medium text-gray-900">
-                                        Categories
-                                      </p>
-                                      <ul role="list" aria-labelledby="desktop-categories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
-                                        <li v-for="item in category.categories" :key="item.name" class="flex">
-                                          <a :href="item.href" class="hover:text-gray-800">{{ item.name }}</a>
-                                        </li>
-                                      </ul>
+                                  </div>
+                                  <div class="grid grid-cols-3 gap-y-10 gap-x-8 text-sm text-gray-500">
+                                    <div v-for="(column, columnIdx) in category.sections" :key="columnIdx" class="space-y-10">
+                                      <div v-for="section in column" :key="section.name">
+                                        <p :id="`${category.id}-${section.id}-heading`" class="font-medium text-gray-900">
+                                          {{ section.name }}
+                                        </p>
+                                        <ul role="list" :aria-labelledby="`${category.id}-${section.id}-heading`" class="mt-4 space-y-4">
+                                          <li v-for="item in section.items" :key="item.name" class="flex">
+                                            <a :href="item.href" class="hover:text-gray-800">{{ item.name }}</a>
+                                          </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -340,58 +350,22 @@ const mobileMenuOpen = ref(false)
                           </PopoverPanel>
                         </transition>
                       </Popover>
-
-                      <a v-for="page in navigation.pages" :key="page.name" :href="page.href" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">{{ page.name }}</a>
                     </div>
-                  </PopoverGroup>
-                </div>
 
-                <!-- Mobile menu and search (lg-) -->
-                <div class="flex flex-1 items-center lg:hidden">
-                  <button type="button" class="-ml-2 rounded-md bg-white p-2 text-gray-400" @click="mobileMenuOpen = true">
-                    <span class="sr-only">Open menu</span>
-                    <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-                  </button>
-                </div>
-
-                <!-- Logo (lg-) -->
-                <a href="/" class="lg:hidden">
-                  <span class="sr-only">Bixolon</span>
-                  <img src="/public/bixolon_orange_logo.jpeg" alt="" class="h-4 w-auto">
-                </a>
-
-                <div class="flex flex-1 items-center justify-end">
-                  <div class="flex items-center lg:ml-8">
-                    <div class="flex space-x-8 items-center">
-                      <Combobox v-model="selectedPerson" as="div">
-                        <div class="relative mt-1">
-                          <ComboboxInput class="w-full rounded-md border border-gray-300 bg-white py-2 px-10 shadow-sm focus:border-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-200 text-sm text-gray-700" :display-value="(person) => person?.name" placeholder="Type to search... CMD K" @change="query = $event.target.value" />
-                          <ComboboxButton class="absolute inset-y-0 left-0 flex items-center rounded-r-md px-2 focus:outline-none">
-                            <MagnifyingGlassIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
-                          </ComboboxButton>
-
-                          <ComboboxOptions v-if="filteredPeople.length > 0" class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                            <ComboboxOption v-for="person in filteredPeople" :key="person.id" v-slot="{ active, selected }" :value="person" as="template">
-                              <li class="relative cursor-default select-none py-2 pl-3 pr-9" :class="[active ? 'bg-gray-600 text-white' : 'text-gray-900']">
-                                <div class="flex items-center">
-                                  <img :src="person.imageUrl" alt="" class="h-6 w-6 flex-shrink-0 rounded-full">
-                                  <span class="ml-3 truncate" :class="[selected && 'font-semibold']">
-                                    {{ person.name }}
-                                  </span>
-                                </div>
-                              </li>
-                            </ComboboxOption>
-                          </ComboboxOptions>
-                        </div>
-                      </Combobox>
-                      <div class="flex">
-                        <a href="#" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
-                          <span class="sr-only">Account</span>
-                          <UserIcon class="h-6 w-6" aria-hidden="true" />
-                        </a>
-                      </div>
+                    <!-- Mobile menu and search (lg-) -->
+                    <div class="flex flex-1 items-center lg:hidden">
+                      <button type="button" class="-ml-2 rounded-md bg-white p-2 text-gray-400" @click="mobileMenuOpen = true">
+                        <span class="sr-only">Open menu</span>
+                        <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+                      </button>
                     </div>
-                  </div>
+
+                    <!-- Logo (lg-) -->
+                    <a href="/" class="lg:hidden">
+                      <span class="sr-only">Bixolon</span>
+                      <img src="/public/bixolon_orange_logo.jpeg" alt="" class="h-4 w-auto">
+                    </a>
+                  </popovergroup>
                 </div>
               </div>
             </div>
