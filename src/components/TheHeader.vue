@@ -116,21 +116,21 @@ const collections = [
   {
     name: 'SRP-S300',
     description: 'Direct Thermal Printer',
-    imageSrc: '../../../public/printer_1.jpeg',
+    imageSrc: '/public/printer_1.jpeg',
     imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
   {
     name: 'SRP-270',
     description: 'Receipt Printer',
-    imageSrc: '../../../public/printer_2.jpeg',
+    imageSrc: '/public/printer_2.jpeg',
     imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
   },
   {
     name: 'STP-103III',
     description: 'POS Printer',
-    imageSrc: '../../../public/printer_3.jpeg',
+    imageSrc: '/public/printer_3.jpeg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
@@ -290,7 +290,7 @@ const mobileMenuOpen = ref(false)
                 <div class="hidden lg:flex lg:items-center">
                   <a href="/">
                     <span class="sr-only">Bixolon</span>
-                    <img class="h-5 w-auto" src="../../../public/bixolon_orange_logo.jpeg" alt="">
+                    <img class="h-5 w-auto" src="/public/bixolon_orange_logo.jpeg" alt="">
                   </a>
                 </div>
 
@@ -357,7 +357,7 @@ const mobileMenuOpen = ref(false)
                 <!-- Logo (lg-) -->
                 <a href="/" class="lg:hidden">
                   <span class="sr-only">Bixolon</span>
-                  <img src="../../../public/bixolon_orange_logo.jpeg" alt="" class="h-4 w-auto">
+                  <img src="/public/bixolon_orange_logo.jpeg" alt="" class="h-4 w-auto">
                 </a>
 
                 <div class="flex flex-1 items-center justify-end">
