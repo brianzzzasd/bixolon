@@ -201,7 +201,10 @@ const navigation = {
         </div>
       </div>
       <div class="space-y-4 md:grid md:grid-cols-5 md:gap-8 md:space-y-0 text-gray-900 border-t border-gray-200 mt-8 pt-8">
-        <div v-for="branch in locations.branches">
+        <div
+          v-for="branch in locations.branches"
+          :key="branch.name"
+        >
           <div class="text-brand-primary font-bold text-lg">
             {{ branch.name }}
           </div>

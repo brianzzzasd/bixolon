@@ -9,22 +9,22 @@ import {
   ComboboxOptions,
   Dialog,
   DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
   Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
-  TransitionChild,
-  TransitionRoot,
 
+  Tab, TabGroup, TabList, TabPanel, TabPanels, TransitionChild, TransitionRoot,
 } from '@headlessui/vue'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { Bars3Icon, BellIcon, MagnifyingGlassIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { CheckIcon, ChevronDownIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
-
 const people = [
   {
     id: 1,
@@ -233,7 +233,8 @@ const navigation = {
   ],
   pages: [
     { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' },
+    { name: 'Unite Program Partner', href: '#' },
+    { name: 'About', href: '#' },
   ],
 }
 
@@ -280,46 +281,6 @@ const testimonials = [
     attribution: 'Chris Paul, Phoenix',
   },
 ]
-const footerNavigation = {
-  products: [
-    { name: 'POS Printers', href: '#' },
-    { name: 'Label Printers', href: '#' },
-    { name: 'Linerless Printers', href: '#' },
-    { name: 'SOHO Printers', href: '#' },
-    { name: 'Mobile Printers', href: '#' },
-    { name: 'Kiosk Printers', href: '#' },
-    { name: 'POS Peripherals', href: '#' },
-    { name: 'Accessories', href: '#' },
-  ],
-  support: [
-    { name: 'Technical Support', href: '#' },
-    { name: 'Shipping', href: '#' },
-    { name: 'Returns', href: '#' },
-    { name: 'Warranty', href: '#' },
-    { name: 'Secure Payments', href: '#' },
-    { name: 'FAQ', href: '#' },
-    { name: 'Find a store', href: '#' },
-  ],
-  company: [
-    { name: 'Who we are', href: '#' },
-    { name: 'Sustainability', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Terms & Conditions', href: '#' },
-    { name: 'Privacy', href: '#' },
-  ],
-  legal: [
-    { name: 'Terms of Service', href: '#' },
-    { name: 'Return Policy', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Shipping Policy', href: '#' },
-  ],
-  bottomLinks: [
-    { name: 'Accessibility', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
-  ],
-}
 
 const mobileMenuOpen = ref(false)
 </script>
@@ -383,12 +344,6 @@ const mobileMenuOpen = ref(false)
                   </TabPanel>
                 </TabPanels>
               </TabGroup>
-
-              <div class="space-y-6 border-t border-gray-200 py-6 px-4">
-                <div v-for="page in navigation.pages" :key="page.name" class="flow-root">
-                  <a :href="page.href" class="-m-2 block p-2 font-medium text-gray-900">{{ page.name }}</a>
-                </div>
-              </div>
 
               <div class="space-y-6 border-t border-gray-200 py-6 px-4">
                 <div class="flow-root">
@@ -475,6 +430,107 @@ const mobileMenuOpen = ref(false)
                           </PopoverPanel>
                         </transition>
                       </Popover>
+                      <div class="space-x-8 relative z-10 flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out outline-none">
+                        <div v-for="page in navigation.pages" :key="page.name" class="flow-root">
+                          <a :href="page.href" class="-m-2 block p-2 font-medium text-gray-900">{{ page.name }}</a>
+                        </div>
+                        <div>
+                          <Disclosure v-slot="{ open }" as="nav" class="bg-white">
+                            <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+                              <div class="flex h-16 justify-between">
+                                <div class="flex flex-1 items-center justify-center px-2 lg:ml-6 lg:justify-end">
+                                  <div class="w-full max-w-lg lg:max-w-xs">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <div class="relative">
+                                      <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                        <MagnifyingGlassIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+                                      </div>
+                                      <input id="search" name="search" class="pr-8 text-gray-700 block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 leading-5 placeholder-gray-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 sm:text-sm" placeholder="Type to search..." type="search">
+                                      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400">
+                                        <svg id="icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M24,13a4,4,0,0,0,4-4V8a4,4,0,0,0-4-4H23a4,4,0,0,0-4,4v3H13V8A4,4,0,0,0,9,4H8A4,4,0,0,0,4,8V9a4,4,0,0,0,4,4h3v6H8a4,4,0,0,0-4,4v1a4,4,0,0,0,4,4H9a4,4,0,0,0,4-4V21h6v3a4,4,0,0,0,4,4h1a4,4,0,0,0,4-4V23a4,4,0,0,0-4-4H21V13ZM21,8a2,2,0,0,1,2-2h1a2,2,0,0,1,2,2V9a2,2,0,0,1-2,2H21ZM8,11A2,2,0,0,1,6,9V8A2,2,0,0,1,8,6H9a2,2,0,0,1,2,2v3H8Zm3,13a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2V23a2,2,0,0,1,2-2h3Zm8-5H13V13h6Zm2,2h3a2,2,0,0,1,2,2v1a2,2,0,0,1-2,2H23a2,2,0,0,1-2-2Z" />
+                                          <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32" />
+                                        </svg>
+                                        K
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="flex items-center lg:hidden">
+                                    <!-- Mobile menu button -->
+                                    <DisclosureButton class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
+                                      <span class="sr-only">Open main menu</span>
+                                      <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
+                                      <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
+                                    </DisclosureButton>
+                                  </div>
+                                  <div class="hidden lg:ml-4 lg:flex lg:items-center">
+                                    <button type="button" class="flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2">
+                                      <span class="sr-only">View notifications</span>
+                                      <BellIcon class="h-6 w-6" aria-hidden="true" />
+                                    </button>
+
+                                    <!-- Profile dropdown -->
+                                    <Menu as="div" class="relative ml-4 flex-shrink-0">
+                                      <div>
+                                        <MenuButton class="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-2">
+                                          <span class="sr-only">Open user menu</span>
+                                          <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                        </MenuButton>
+                                      </div>
+                                      <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
+                                        <MenuItems class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                          <MenuItem v-slot="{ active }">
+                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" :class="[active ? 'bg-gray-100' : '']">Your Profile</a>
+                                          </MenuItem>
+                                          <MenuItem v-slot="{ active }">
+                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" :class="[active ? 'bg-gray-100' : '']">Settings</a>
+                                          </MenuItem>
+                                          <MenuItem v-slot="{ active }">
+                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" :class="[active ? 'bg-gray-100' : '']">Sign out</a>
+                                          </MenuItem>
+                                        </MenuItems>
+                                      </transition>
+                                    </Menu>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <DisclosurePanel class="lg:hidden">
+                                <div class="border-t border-gray-200 pt-4 pb-3">
+                                  <div class="flex items-center px-4">
+                                    <div class="flex-shrink-0">
+                                      <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                    </div>
+                                    <div class="ml-3">
+                                      <div class="text-base font-medium text-gray-800">
+                                        Liz Crouch
+                                      </div>
+                                      <div class="text-sm font-medium text-gray-500">
+                                        liz@example.com
+                                      </div>
+                                    </div>
+                                    <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                      <span class="sr-only">View notifications</span>
+                                      <BellIcon class="h-6 w-6" aria-hidden="true" />
+                                    </button>
+                                  </div>
+                                  <div class="mt-3 space-y-1">
+                                    <DisclosureButton as="a" href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800">
+                                      Your Profile
+                                    </DisclosureButton>
+                                    <DisclosureButton as="a" href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800">
+                                      Settings
+                                    </DisclosureButton>
+                                    <DisclosureButton as="a" href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800">
+                                      Sign out
+                                    </DisclosureButton>
+                                  </div>
+                                </div>
+                              </DisclosurePanel>
+                            </div>
+                          </Disclosure>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- Mobile menu and search (lg-) -->
@@ -500,3 +556,9 @@ const mobileMenuOpen = ref(false)
     </header>
   </div>
 </template>
+
+<style scoped>
+.cls-1 {
+  fill: none;
+}
+</style>
