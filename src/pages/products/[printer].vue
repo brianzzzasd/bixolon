@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { StarIcon } from '@heroicons/vue/20/solid'
+import { ArchiveBoxIcon, EnvelopeIcon, StarIcon, VideoCameraIcon } from '@heroicons/vue/20/solid'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 
 const props = defineProps<{ printer: string }>()
@@ -8,89 +8,65 @@ const printers = [
   {
     id: 1,
     name: 'SRP-S3000',
-    description_1: '3-inch Linerless Printer',
-    description_2: 'Feature-Rich',
-    description_3: 'Premium',
+    description: 'A premium linerless label printer with Linerless Pro™ technology and LCD color display, the SRP-S3000 provides both linerless and liner label printing. A feature rich printing solution which is ideal for a variety of applications from food safety, e-commerce and order labelling.',
     href: '#',
     imageSrc: '/printer_1.jpeg',
-    price: '$35',
     color: 'Black',
   },
   {
     id: 2,
     name: 'SRP-S300',
-    description_1: '3 inch Re-Stick',
-    description_2: 'Label and Receipt',
-    description_3: 'Direct Thermal Printer',
     href: '#',
+    description: '3 inch Liner-Free, Label and Receipt, Direct Thermal Printer',
     imageSrc: '/printer_2.jpeg',
-    price: '$35',
     color: 'Black',
   },
   {
     id: 3,
     name: 'SRP-S200',
-    description_1: '2-inch Direct Thermal',
-    description_2: 'Linerless Printer',
-    description_3: 'Compact and Economical',
+    description: 'A super compact, linerless printing solution, the SRP-S200 is the world’s first 2-inch linerless printer with print speeds of up to 150mm/sec to create 203dpi printing resolution on re-stick media. The SRP-S200 also features a specialized back-feed function alongside a paper saving mode to create a cost effective labelling solution.',
     href: '#',
     imageSrc: '/printer_3.jpeg',
-    price: '$35',
     color: 'Black',
   },
   {
     id: 4,
     name: 'SRP-Q300',
-    description_1: 'Smart and Flexible',
-    description_2: '3 inch Cube',
-    description_3: 'Printer for mPOS',
+    description: 'Smart and Flexible, 3 inch Cube Printer for mPOS',
     href: '#',
     imageSrc: '/printer_4.jpeg',
-    price: '$35',
     color: 'Black',
   },
   {
     id: 5,
     name: 'SRP-S320',
-    description_1: '3-inch',
-    description_2: 'Linerless and Receipt',
-    description_3: 'Ideal for use with electronic scales',
+    description: '3-inch, Linerless and Receipt Ideal for use with electronic scales',
     href: '#',
     imageSrc: '/printer_5.jpeg',
-    price: '$35',
     color: 'Black',
   },
   {
     id: 6,
     name: 'SRP-Q200',
-    description_1: 'Ultra Compact',
-    description_2: '2-inch Cube',
-    description_3: 'Direct Thermal Printer',
     href: '#',
+    description: 'The SRP-Q200 is 2-inch (58mm) super compact thermal printing solution with front and top exiting printing configurations. Combining fast print speeds, high reliability and value added features making it ideal for couponing or ticketing applications.',
     imageSrc: '/printer_6.jpeg',
-    price: '$35',
     color: 'Black',
   },
   {
     id: 7,
     name: 'SRP-350plusIII',
-    description_1: 'The perfect fit for mPOS solutions',
-    description_2: '3 inch Thermal',
-    description_3: 'mPOS-ible Receipt Printer',
+    description: 'The perfect mPOS solution, 3 inch Thermal mPOS-ible Receipt Printer',
     href: '#',
     imageSrc: '/printer_7.jpeg',
-    price: '$35',
     color: 'Black',
   },
   {
     id: 8,
     name: 'SRP-350III',
-    description_1: 'The industry’s steady seller',
-    description_2: '3 inch Thermal',
-    description_3: 'Receipt Printer',
+    description: 'The industry’s steady seller, 3 inch Thermal Receipt Printer',
     href: '#',
     imageSrc: '/printer_8.jpeg',
-    price: '$35',
     color: 'Black',
   },
 ]
@@ -103,8 +79,7 @@ const product = {
   name: printer?.name,
   version: { name: '1.0', date: 'Jan 1, 2023', datetime: '2023-01-01' },
   price: '$220',
-  description:
-    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo',
+  description: printer?.description,
   highlights: [
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
@@ -113,6 +88,7 @@ const product = {
   imageSrc: printer?.imageSrc,
   imageAlt: 'Sample of 30 icons with friendly and fun details in outline, filled, and brand color styles.',
 }
+
 const reviews = {
   average: 4,
   featured: [
@@ -232,11 +208,21 @@ const license = {
           </p>
 
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-            <button type="button" class="flex w-full items-center justify-center rounded-md border border-transparent bg-brand-primary py-3 px-8 text-base font-medium text-white hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50">
-              Pay {{ product.price }}
+            <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+              <VideoCameraIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+              Video
             </button>
-            <button type="button" class="flex w-full border border-gray-100 items-center justify-center rounded-md py-3 px-8 text-base font-medium text-gray-700 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50">
-              Preview
+            <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+              <VideoCameraIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+              Download
+            </button>
+            <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+              <EnvelopeIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+              Contact
+            </button>
+            <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+              <ArchiveBoxIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+              Brochure
             </button>
           </div>
 

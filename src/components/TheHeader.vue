@@ -59,6 +59,96 @@ const navigation = {
       featured: [
         {
           name: 'New Arrivals',
+          href: '/products',
+          imageSrc: '/kiosk_printer.png',
+          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+        },
+        {
+          name: 'Label Printers',
+          href: '/products',
+          imageSrc: '/label_printer.png',
+          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+        },
+        {
+          name: 'POS Printers',
+          href: '/products',
+          imageSrc: '/printer_1.jpeg',
+          imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
+        },
+      ],
+      sections: [
+        [
+          {
+            id: 'shoes',
+            name: 'Shoes & Accessories',
+            items: [
+              { name: 'Sneakers', href: '#' },
+              { name: 'Boots', href: '#' },
+              { name: 'Flats', href: '#' },
+              { name: 'Sandals', href: '#' },
+              { name: 'Heels', href: '#' },
+              { name: 'Socks', href: '#' },
+            ],
+          },
+          {
+            id: 'collection',
+            name: 'Shop Collection',
+            items: [
+              { name: 'Everything', href: '#' },
+              { name: 'Core', href: '#' },
+              { name: 'New Arrivals', href: '#' },
+              { name: 'Sale', href: '#' },
+              { name: 'Accessories', href: '#' },
+            ],
+          },
+        ],
+        [
+          {
+            id: 'clothing',
+            name: 'All Clothing',
+            items: [
+              { name: 'Basic Tees', href: '#' },
+              { name: 'Artwork Tees', href: '#' },
+              { name: 'Tops', href: '#' },
+              { name: 'Bottoms', href: '#' },
+              { name: 'Swimwear', href: '#' },
+              { name: 'Underwear', href: '#' },
+            ],
+          },
+          {
+            id: 'accessories',
+            name: 'All Accessories',
+            items: [
+              { name: 'Watches', href: '#' },
+              { name: 'Wallets', href: '#' },
+              { name: 'Bags', href: '#' },
+              { name: 'Sunglasses', href: '#' },
+              { name: 'Hats', href: '#' },
+              { name: 'Belts', href: '#' },
+            ],
+          },
+        ],
+        [
+          {
+            id: 'brands',
+            name: 'Brands',
+            items: [
+              { name: 'Full Nelson', href: '#' },
+              { name: 'My Way', href: '#' },
+              { name: 'Re-Arranged', href: '#' },
+              { name: 'Counterfeit', href: '#' },
+              { name: 'Significant Other', href: '#' },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 'products_featured',
+      name: 'Products',
+      featured: [
+        {
+          name: 'New Arrivals',
           href: '#',
           imageSrc: '/kiosk_printer.png',
           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
@@ -138,93 +228,6 @@ const navigation = {
               { name: 'Re-Arranged', href: '#' },
               { name: 'Counterfeit', href: '#' },
               { name: 'Significant Other', href: '#' },
-            ],
-          },
-        ],
-      ],
-    },
-    {
-      id: 'solutions',
-      name: 'Solutions',
-      featured: [
-        {
-          name: 'Accessories',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg',
-          imageAlt:
-            'Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters.',
-        },
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
-        },
-        {
-          name: 'Artwork Tees',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
-      ],
-      sections: [
-        [
-          {
-            id: 'shoes',
-            name: 'Shoes & Accessories',
-            items: [
-              { name: 'Sneakers', href: '#' },
-              { name: 'Boots', href: '#' },
-              { name: 'Sandals', href: '#' },
-              { name: 'Socks', href: '#' },
-            ],
-          },
-          {
-            id: 'collection',
-            name: 'Shop Collection',
-            items: [
-              { name: 'Everything', href: '#' },
-              { name: 'Core', href: '#' },
-              { name: 'New Arrivals', href: '#' },
-              { name: 'Sale', href: '#' },
-            ],
-          },
-        ],
-        [
-          {
-            id: 'clothing',
-            name: 'All Clothing',
-            items: [
-              { name: 'Basic Tees', href: '#' },
-              { name: 'Artwork Tees', href: '#' },
-              { name: 'Pants', href: '#' },
-              { name: 'Hoodies', href: '#' },
-              { name: 'Swimsuits', href: '#' },
-            ],
-          },
-          {
-            id: 'accessories',
-            name: 'All Accessories',
-            items: [
-              { name: 'Watches', href: '#' },
-              { name: 'Wallets', href: '#' },
-              { name: 'Bags', href: '#' },
-              { name: 'Sunglasses', href: '#' },
-              { name: 'Hats', href: '#' },
-              { name: 'Belts', href: '#' },
-            ],
-          },
-        ],
-        [
-          {
-            id: 'brands',
-            name: 'Brands',
-            items: [
-              { name: 'Re-Arranged', href: '#' },
-              { name: 'Counterfeit', href: '#' },
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
             ],
           },
         ],
@@ -486,7 +489,7 @@ const mobileMenuOpen = ref(false)
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700" :class="[active ? 'bg-gray-100' : '']">Settings</a>
                                           </MenuItem>
                                           <MenuItem v-slot="{ active }">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" :class="[active ? 'bg-gray-100' : '']">Sign out</a>
+                                            <a href="/login" class="block px-4 py-2 text-sm text-gray-700" :class="[active ? 'bg-gray-100' : '']">Sign out</a>
                                           </MenuItem>
                                         </MenuItems>
                                       </transition>
