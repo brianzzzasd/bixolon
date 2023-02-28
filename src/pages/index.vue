@@ -468,7 +468,7 @@ const mobileMenuOpen = ref(false)
           </div>
 
           <!-- Logo Cloud -->
-          <div class="pt-24 pb-12 sm:pt-32 sm:pb-16">
+          <div class="py-24 sm:pt-32 sm:pb-32">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
               <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
                 Trusted by the world’s most innovative teams
