@@ -166,7 +166,7 @@ const mobileFiltersOpen = ref(false)
                       <DisclosurePanel class="px-4 pt-4 pb-2">
                         <div class="space-y-6">
                           <div v-for="(option, optionIdx) in section.options" :key="option.value" class="flex items-center">
-                            <input :id="`${section.id}-${optionIdx}-mobile`" :name="`${section.id}[]`" :value="option.value" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                            <input :id="`${section.id}-${optionIdx}-mobile`" :name="`${section.id}[]`" :value="option.value" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-orange-600 focus:ring-orange-500">
                             <label :for="`${section.id}-${optionIdx}-mobile`" class="ml-3 text-sm text-gray-500">{{ option.label }}</label>
                           </div>
                         </div>
@@ -210,7 +210,7 @@ const mobileFiltersOpen = ref(false)
                     </legend>
                     <div class="space-y-3 pt-6">
                       <div v-for="(option, optionIdx) in section.options" :key="option.value" class="flex items-center">
-                        <input :id="`${section.id}-${optionIdx}`" :name="`${section.id}[]`" :value="option.value" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <input :id="`${section.id}-${optionIdx}`" :name="`${section.id}[]`" :value="option.value" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-orange-600 focus:ring-orange-500">
                         <label :for="`${section.id}-${optionIdx}`" class="ml-3 text-sm text-gray-600">{{ option.label }}</label>
                       </div>
                     </div>

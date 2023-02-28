@@ -244,7 +244,7 @@ const license = {
               License
             </h3>
             <p class="mt-4 text-sm text-gray-500">
-              {{ license.summary }} <a :href="license.href" class="font-medium text-brand-primary hover:text-indigo-500">Read full license</a>
+              {{ license.summary }} <a :href="license.href" class="font-medium text-brand-primary hover:text-orange-500">Read full license</a>
             </p>
           </div>
 
