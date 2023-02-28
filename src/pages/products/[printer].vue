@@ -287,7 +287,7 @@ const license = {
               <TabList class="-mb-px flex space-x-8">
                 <Tab v-slot="{ selected }" as="template">
                   <button class="whitespace-nowrap border-b-2 py-6 text-sm font-medium focus:outline-none" :class="[selected ? 'border-brand-primary text-brand-primary' : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300']">
-                    Customer Reviews
+                    Reviews
                   </button>
                 </Tab>
                 <Tab v-slot="{ selected }" as="template">
@@ -305,7 +305,7 @@ const license = {
             <TabPanels as="template">
               <TabPanel class="-mb-10">
                 <h3 class="sr-only">
-                  Customer Reviews
+                  Reviews
                 </h3>
 
                 <div v-for="(review, reviewIdx) in reviews.featured" :key="review.id" class="flex space-x-4 text-sm text-gray-500">

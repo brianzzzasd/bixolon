@@ -288,7 +288,7 @@ const mobileMenuOpen = ref(false)
                     The industry leader in innovative printing technology.
                   </p>
                   <div class="mt-6">
-                    <a href="/products" class="inline-block rounded-md border border-transparent bg-brand-primary py-3 px-8 font-medium text-white hover:opacity-50">See Products</a>
+                    <a href="/products" class="inline-block rounded-md border border-transparent bg-brand-primary py-3 px-8 font-medium text-white hover:opacity-50">Explore Products</a>
                   </div>
                 </div>
               </div>

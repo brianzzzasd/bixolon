@@ -175,7 +175,7 @@ const mobileFiltersOpen = ref(false)
             Products
           </h1>
           <p class="mt-4 text-base text-gray-500">
-            Checkout our products!
+            Explore our products that make us a leading global Mobile, Label and POS printer manufacturer.
           </p>
         </div>
 
