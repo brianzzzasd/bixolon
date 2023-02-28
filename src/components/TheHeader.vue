@@ -20,8 +20,9 @@ import {
   TabPanels,
   TransitionChild,
   TransitionRoot,
+
 } from '@headlessui/vue'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { CheckIcon, ChevronDownIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 
 const people = [
@@ -53,65 +54,189 @@ const currencies = ['CAD', 'USD', 'AUD', 'EUR', 'GBP']
 const navigation = {
   categories: [
     {
+      id: 'products_featured',
       name: 'Products',
       featured: [
-        { name: 'POS Printers', href: '/products' },
-        { name: 'Label Printers', href: '#' },
-        { name: 'Linerless Printers', href: '#' },
-        { name: 'SOHO Printers', href: '#' },
-        { name: 'Mobile Printers', href: '#' },
-        { name: 'Kiosk Printers', href: '#' },
-        { name: 'POS Peripherals', href: '#' },
-        { name: 'Accessories', href: '#' },
+        {
+          name: 'New Arrivals',
+          href: '#',
+          imageSrc: '/kiosk_printer.png',
+          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+        },
+        {
+          name: 'Label Printers',
+          href: '#',
+          imageSrc: '/label_printer.png',
+          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+        },
+        {
+          name: 'POS Printers',
+          href: '#',
+          imageSrc: '/printer_1.jpeg',
+          imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
+        },
       ],
-      categories: [
-        { name: 'Full Nelson', href: '#' },
-        { name: 'My Way', href: '#' },
-        { name: 'Re-Arranged', href: '#' },
-        { name: 'Counterfeit', href: '#' },
-        { name: 'Significant Other', href: '#' },
+      sections: [
+        [
+          {
+            id: 'shoes',
+            name: 'Shoes & Accessories',
+            items: [
+              { name: 'Sneakers', href: '#' },
+              { name: 'Boots', href: '#' },
+              { name: 'Flats', href: '#' },
+              { name: 'Sandals', href: '#' },
+              { name: 'Heels', href: '#' },
+              { name: 'Socks', href: '#' },
+            ],
+          },
+          {
+            id: 'collection',
+            name: 'Shop Collection',
+            items: [
+              { name: 'Everything', href: '#' },
+              { name: 'Core', href: '#' },
+              { name: 'New Arrivals', href: '#' },
+              { name: 'Sale', href: '#' },
+              { name: 'Accessories', href: '#' },
+            ],
+          },
+        ],
+        [
+          {
+            id: 'clothing',
+            name: 'All Clothing',
+            items: [
+              { name: 'Basic Tees', href: '#' },
+              { name: 'Artwork Tees', href: '#' },
+              { name: 'Tops', href: '#' },
+              { name: 'Bottoms', href: '#' },
+              { name: 'Swimwear', href: '#' },
+              { name: 'Underwear', href: '#' },
+            ],
+          },
+          {
+            id: 'accessories',
+            name: 'All Accessories',
+            items: [
+              { name: 'Watches', href: '#' },
+              { name: 'Wallets', href: '#' },
+              { name: 'Bags', href: '#' },
+              { name: 'Sunglasses', href: '#' },
+              { name: 'Hats', href: '#' },
+              { name: 'Belts', href: '#' },
+            ],
+          },
+        ],
+        [
+          {
+            id: 'brands',
+            name: 'Brands',
+            items: [
+              { name: 'Full Nelson', href: '#' },
+              { name: 'My Way', href: '#' },
+              { name: 'Re-Arranged', href: '#' },
+              { name: 'Counterfeit', href: '#' },
+              { name: 'Significant Other', href: '#' },
+            ],
+          },
+        ],
       ],
     },
     {
-      name: 'Solutions',
+      id: 'men',
+      name: 'Men',
       featured: [
-        { name: 'Retail', href: '#' },
-        { name: 'Hospitality', href: '#' },
-        { name: 'Manufacturing', href: '#' },
-        { name: 'Transportation', href: '#' },
-        { name: 'Healthcare', href: '#' },
-        { name: 'Public Sector', href: '#' },
-        { name: 'Ticketing', href: '#' },
-        { name: 'Aviation', href: '#' },
+        {
+          name: 'Accessories',
+          href: '#',
+          imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg',
+          imageAlt:
+            'Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters.',
+        },
+        {
+          name: 'New Arrivals',
+          href: '#',
+          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
+          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
+        },
+        {
+          name: 'Artwork Tees',
+          href: '#',
+          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
+          imageAlt:
+            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+        },
       ],
-      collection: [
-        { name: 'Everything', href: '#' },
-        { name: 'Core', href: '#' },
-        { name: 'New Arrivals', href: '#' },
-        { name: 'Sale', href: '#' },
-      ],
-      categories: [
-        { name: 'Artwork Tees', href: '#' },
-        { name: 'Pants', href: '#' },
-        { name: 'Accessories', href: '#' },
-        { name: 'Boxers', href: '#' },
-        { name: 'Basic Tees', href: '#' },
-      ],
-      brands: [
-        { name: 'Significant Other', href: '#' },
-        { name: 'My Way', href: '#' },
-        { name: 'Counterfeit', href: '#' },
-        { name: 'Re-Arranged', href: '#' },
-        { name: 'Full Nelson', href: '#' },
+      sections: [
+        [
+          {
+            id: 'shoes',
+            name: 'Shoes & Accessories',
+            items: [
+              { name: 'Sneakers', href: '#' },
+              { name: 'Boots', href: '#' },
+              { name: 'Sandals', href: '#' },
+              { name: 'Socks', href: '#' },
+            ],
+          },
+          {
+            id: 'collection',
+            name: 'Shop Collection',
+            items: [
+              { name: 'Everything', href: '#' },
+              { name: 'Core', href: '#' },
+              { name: 'New Arrivals', href: '#' },
+              { name: 'Sale', href: '#' },
+            ],
+          },
+        ],
+        [
+          {
+            id: 'clothing',
+            name: 'All Clothing',
+            items: [
+              { name: 'Basic Tees', href: '#' },
+              { name: 'Artwork Tees', href: '#' },
+              { name: 'Pants', href: '#' },
+              { name: 'Hoodies', href: '#' },
+              { name: 'Swimsuits', href: '#' },
+            ],
+          },
+          {
+            id: 'accessories',
+            name: 'All Accessories',
+            items: [
+              { name: 'Watches', href: '#' },
+              { name: 'Wallets', href: '#' },
+              { name: 'Bags', href: '#' },
+              { name: 'Sunglasses', href: '#' },
+              { name: 'Hats', href: '#' },
+              { name: 'Belts', href: '#' },
+            ],
+          },
+        ],
+        [
+          {
+            id: 'brands',
+            name: 'Brands',
+            items: [
+              { name: 'Re-Arranged', href: '#' },
+              { name: 'Counterfeit', href: '#' },
+              { name: 'Full Nelson', href: '#' },
+              { name: 'My Way', href: '#' },
+            ],
+          },
+        ],
       ],
     },
   ],
   pages: [
-    { name: 'Support', href: '#' },
-    { name: 'Unite Partner Program', href: '#' },
-    { name: 'About', href: '#' },
+    { name: 'Company', href: '#' },
+    { name: 'Stores', href: '#' },
   ],
 }
+
 const collections = [
   {
     name: 'SRP-S300',
@@ -300,9 +425,9 @@ const mobileMenuOpen = ref(false)
                     <div class="flex h-full space-x-8">
                       <Popover v-for="category in navigation.categories" :key="category.name" v-slot="{ open }" class="flex">
                         <div class="relative flex">
-                          <PopoverButton class="relative z-10 flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out" :class="[open ? 'text-indigo-600' : 'text-gray-700 hover:text-gray-800']">
+                          <PopoverButton class="relative z-10 flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out outline-none" :class="[open ? 'text-brand-primary' : 'text-gray-700 hover:text-gray-800']">
                             {{ category.name }}
-                            <span class="absolute inset-x-0 bottom-0 h-0.5 transition-colors duration-200 ease-out sm:mt-5 sm:translate-y-px sm:transform" :class="[open ? 'bg-indigo-600' : '']" aria-hidden="true" />
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 transition-colors duration-200 ease-out sm:mt-5 sm:translate-y-px sm:transform" :class="[open ? 'bg-brand-primary' : '']" aria-hidden="true" />
                           </PopoverButton>
                         </div>
 
@@ -334,7 +459,7 @@ const mobileMenuOpen = ref(false)
                                     <div v-for="(column, columnIdx) in category.sections" :key="columnIdx" class="space-y-10">
                                       <div v-for="section in column" :key="section.name">
                                         <p :id="`${category.id}-${section.id}-heading`" class="font-medium text-gray-900">
-                                          {{ section.name }}
+                                          {{ section.xxx }}
                                         </p>
                                         <ul role="list" :aria-labelledby="`${category.id}-${section.id}-heading`" class="mt-4 space-y-4">
                                           <li v-for="item in section.items" :key="item.name" class="flex">
