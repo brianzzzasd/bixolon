@@ -1,7 +1,11 @@
+<script setup>
+const route = useRoute()
+</script>
+
 <template>
   <div>
-    <TheHeader />
+    <TheHeader v-if="route.path !== '/login'" />
     <RouterView />
-    <TheFooter />
+    <TheFooter v-if="route.path !== '/login'" />
   </div>
 </template>
