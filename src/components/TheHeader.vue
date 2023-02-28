@@ -144,8 +144,8 @@ const navigation = {
       ],
     },
     {
-      id: 'men',
-      name: 'Men',
+      id: 'solutions',
+      name: 'Solutions',
       featured: [
         {
           name: 'Accessories',
