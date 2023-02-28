@@ -373,7 +373,7 @@ const mobileMenuOpen = ref(false)
                 <div class="hidden lg:flex lg:items-center">
                   <a href="/">
                     <span class="sr-only">Bixolon</span>
-                    <img class="h-5 w-auto" src="/public/bixolon_orange_logo.jpeg" alt="">
+                    <img class="h-5 w-auto" src="/bixolon_orange_logo.jpeg" alt="">
                   </a>
                 </div>
 
@@ -547,9 +547,9 @@ const mobileMenuOpen = ref(false)
                     <!-- Logo (lg-) -->
                     <a href="/" class="lg:hidden">
                       <span class="sr-only">Bixolon</span>
-                      <img src="/public/bixolon_orange_logo.jpeg" alt="" class="h-4 w-auto">
+                      <img src="/bixolon_orange_logo.jpeg" alt="" class="h-4 w-auto">
                     </a>
-                  </popovergroup>
+                  </PopoverGroup>
                 </div>
               </div>
             </div>
