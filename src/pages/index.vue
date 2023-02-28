@@ -375,7 +375,7 @@ const mobileMenuOpen = ref(false)
             </div>
 
             <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:gap-y-6">
-              <div v-for="collection in collections" :key="collection.name" class="group relative">
+              <div v-for="(collection, index) in collections" :key="collection.name" class="group relative" :class="index === 0 ? 'pt-12' : ''">
                 <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                   <img :src="collection.imageSrc" :alt="collection.imageAlt" class="h-full w-full object-cover object-center">
                 </div>
