@@ -161,7 +161,7 @@ const navigation = {
     <h2 id="footer-heading" class="sr-only">
       Footer
     </h2>
-    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-15 lg:px-8 lg:pt-20 border-t border-gray-200">
+    <div class="mx-auto max-w-7xl px-6 pb-20 pt-16 sm:pt-15 lg:px-8 lg:pt-20 border-t border-gray-200">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <img class="h-7" src="/bixolon_orange_logo.jpeg" alt="Company name">
         <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -211,7 +211,7 @@ const navigation = {
           </div>
         </div>
       </div>
-      <div class="space-y-4 md:grid md:grid-cols-5 md:gap-8 md:space-y-0 text-gray-900 border-t border-gray-200 mt-8 pt-8">
+      <div class="space-y-4 md:grid md:grid-cols-5 md:gap-8 md:space-y-0 text-gray-900 border-t border-gray-200 mt-16 pt-8">
         <div
           v-for="branch in locations.branches"
           :key="branch.name"
