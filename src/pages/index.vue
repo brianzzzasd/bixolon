@@ -143,6 +143,36 @@ const collections = [
     imageSrc: '/printer_2.jpeg',
     price: '$35',
   },
+  {
+    id: 7,
+    name: 'SRP-S3000',
+    description_1: '3-inch Linerless Printer',
+    description_2: 'Feature-Rich',
+    description_3: 'Premium',
+    href: '/products/1',
+    imageSrc: '/printer_2.jpeg',
+    price: '$35',
+  },
+  {
+    id: 8,
+    name: 'SRP-S300',
+    description_1: '3 inch Re-Stick',
+    description_2: 'Label and Receipt',
+    description_3: 'Direct Thermal Printer',
+    href: '/products/2',
+    imageSrc: '/printer_1.jpeg',
+    price: '$35',
+  },
+  {
+    id: 9,
+    name: 'SRP-S200',
+    description_1: '2-inch Direct Thermal',
+    description_2: 'Linerless Printer',
+    description_3: 'Compact and Economical',
+    href: '/products/3',
+    imageSrc: '/printer_3.jpeg',
+    price: '$35',
+  },
 ]
 const testimonials = [
   {
@@ -335,11 +365,16 @@ const mobileMenuOpen = ref(false)
       <section aria-labelledby="collections-heading" class="bg-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border-gray-200">
           <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-            <h2 id="collections-heading" class="text-2xl font-bold text-gray-900">
-              Popular Products
-            </h2>
+            <div class="mx-auto max-w-2xl text-center">
+              <h2 id="collections-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Featured Products
+              </h2>
+              <p class="mt-2 text-lg leading-8 text-gray-600">
+                The printing industry’s latest technologies & trends.
+              </p>
+            </div>
 
-            <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+            <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:gap-y-6">
               <div v-for="collection in collections" :key="collection.name" class="group relative">
                 <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                   <img :src="collection.imageSrc" :alt="collection.imageAlt" class="h-full w-full object-cover object-center">
@@ -356,6 +391,47 @@ const mobileMenuOpen = ref(false)
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Sale and testimonials -->
+        <div class="relative overflow-hidden">
+          <!-- Decorative background image and gradient -->
+          <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
+              <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-sale-full-width.jpg" alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="absolute inset-0 bg-white bg-opacity-75" />
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white" />
+          </div>
+
+          <!-- Sale -->
+          <section aria-labelledby="sale-heading" class="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-32 text-center sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:max-w-none">
+              <h2 id="sale-heading" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                Get 25% off during our one-time sale
+              </h2>
+              <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">
+                Most of our products are limited releases that won't come back. Get your favorite items while they're in stock.
+              </p>
+              <a href="#" class="mt-6 inline-block w-full rounded-md border border-transparent bg-brand-primary py-3 px-8 font-medium text-white hover:opacity-50 sm:w-auto">Get access to our one-time sale</a>
+            </div>
+
+            <!-- Logo Cloud -->
+            <div class="py-24 sm:pt-32 sm:pb-32">
+              <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
+                  Trusted by the world’s most innovative teams
+                </h2>
+                <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                  <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
+                  <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+                  <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+                  <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+                  <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <div class="bg-white py-24 sm:py-32 border-t border-gray-200">
@@ -443,47 +519,6 @@ const mobileMenuOpen = ref(false)
           </div>
         </div> -->
       </section>
-
-      <!-- Sale and testimonials -->
-      <div class="relative overflow-hidden">
-        <!-- Decorative background image and gradient -->
-        <div aria-hidden="true" class="absolute inset-0">
-          <div class="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
-            <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-sale-full-width.jpg" alt="" class="h-full w-full object-cover object-center">
-          </div>
-          <div class="absolute inset-0 bg-white bg-opacity-75" />
-          <div class="absolute inset-0 bg-gradient-to-t from-white via-white" />
-        </div>
-
-        <!-- Sale -->
-        <section aria-labelledby="sale-heading" class="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-32 text-center sm:px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:max-w-none">
-            <h2 id="sale-heading" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-              Get 25% off during our one-time sale
-            </h2>
-            <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">
-              Most of our products are limited releases that won't come back. Get your favorite items while they're in stock.
-            </p>
-            <a href="#" class="mt-6 inline-block w-full rounded-md border border-transparent bg-brand-primary py-3 px-8 font-medium text-white hover:opacity-50 sm:w-auto">Get access to our one-time sale</a>
-          </div>
-
-          <!-- Logo Cloud -->
-          <div class="py-24 sm:pt-32 sm:pb-32">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
-                Trusted by the world’s most innovative teams
-              </h2>
-              <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
-                <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
     </main>
   </div>
 </template>
