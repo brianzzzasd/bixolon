@@ -79,65 +79,33 @@ const navigation = {
       sections: [
         [
           {
-            id: 'shoes',
-            name: 'Shoes & Accessories',
+            id: 'products',
+            name: 'Products',
             items: [
-              { name: 'Sneakerss', href: '#' },
-              { name: 'Boots', href: '#' },
-              { name: 'Flats', href: '#' },
-              { name: 'Sandals', href: '#' },
-              { name: 'Heels', href: '#' },
-              { name: 'Socks', href: '#' },
+              { name: 'Label Printers', href: '#' },
+              { name: 'Linerless Printers', href: '#' },
+              { name: 'SOHO Series', href: '#' },
+              { name: 'Mobile Printers', href: '#' },
+              { name: 'Kiosk Printers', href: '#' },
             ],
           },
+        ],
+        [
           {
             id: 'collection',
             name: 'Shop Collection',
             items: [
-              { name: 'Everything', href: '#' },
-              { name: 'Core', href: '#' },
-              { name: 'New Arrivals', href: '#' },
-              { name: 'Sale', href: '#' },
+              { name: 'POS Printers', href: '#' },
+              { name: 'POS Peripherals', href: '#' },
+            ],
+          },
+        ],
+        [
+          {
+            id: 'collection',
+            name: 'Shop Collection',
+            items: [
               { name: 'Accessories', href: '#' },
-            ],
-          },
-        ],
-        [
-          {
-            id: 'clothing',
-            name: 'All Clothing',
-            items: [
-              { name: 'Basic Tees', href: '#' },
-              { name: 'Artwork Tees', href: '#' },
-              { name: 'Tops', href: '#' },
-              { name: 'Bottoms', href: '#' },
-              { name: 'Swimwear', href: '#' },
-              { name: 'Underwear', href: '#' },
-            ],
-          },
-          {
-            id: 'accessories',
-            name: 'All Accessories',
-            items: [
-              { name: 'Watches', href: '#' },
-              { name: 'Wallets', href: '#' },
-              { name: 'Bags', href: '#' },
-              { name: 'Sunglasses', href: '#' },
-              { name: 'Hats', href: '#' },
-              { name: 'Belts', href: '#' },
-            ],
-          },
-        ],
-        [
-          {
-            id: 'brands',
-            name: 'Brands',
-            items: [
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
-              { name: 'Re-Arranged', href: '#' },
-              { name: 'Counterfeit', href: '#' },
-              { name: 'Significant Other', href: '#' },
             ],
           },
         ],
@@ -147,12 +115,12 @@ const navigation = {
       id: 'products_featured',
       name: 'Solutions',
       featured: [
-        // {
-        //   name: 'New Arrivals',
-        //   href: '#',
-        //   imageSrc: '/kiosk_printer.png',
-        //   imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        // },
+        {
+          name: 'New Arrivals',
+          href: '#',
+          imageSrc: '/kiosk_printer.png',
+          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+        },
         {
           name: 'Label Printers',
           href: '#',
@@ -172,23 +140,23 @@ const navigation = {
             id: 'shoes',
             name: 'Shoes & Accessories',
             items: [
-              { name: 'Sneakers', href: '#' },
-              { name: 'Boots', href: '#' },
-              { name: 'Flats', href: '#' },
-              { name: 'Sandals', href: '#' },
-              { name: 'Heels', href: '#' },
-              { name: 'Socks', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
             ],
           },
           {
             id: 'collection',
             name: 'Shop Collection',
             items: [
-              { name: 'Everything', href: '#' },
-              { name: 'Core', href: '#' },
-              { name: 'New Arrivals', href: '#' },
-              { name: 'Sale', href: '#' },
-              { name: 'Accessories', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
             ],
           },
         ],
@@ -197,24 +165,24 @@ const navigation = {
             id: 'clothing',
             name: 'All Clothing',
             items: [
-              { name: 'Basic Tees', href: '#' },
-              { name: 'Artwork Tees', href: '#' },
-              { name: 'Tops', href: '#' },
-              { name: 'Bottoms', href: '#' },
-              { name: 'Swimwear', href: '#' },
-              { name: 'Underwear', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
             ],
           },
           {
             id: 'accessories',
             name: 'All Accessories',
             items: [
-              { name: 'Watches', href: '#' },
-              { name: 'Wallets', href: '#' },
-              { name: 'Bags', href: '#' },
-              { name: 'Sunglasses', href: '#' },
-              { name: 'Hats', href: '#' },
-              { name: 'Belts', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
             ],
           },
         ],
@@ -223,11 +191,11 @@ const navigation = {
             id: 'brands',
             name: 'Brands',
             items: [
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
-              { name: 'Re-Arranged', href: '#' },
-              { name: 'Counterfeit', href: '#' },
-              { name: 'Significant Other', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
+              { name: 'Solution', href: '#' },
             ],
           },
         ],
@@ -396,7 +364,7 @@ const mobileMenuOpen = ref(false)
 
                             <div class="relative bg-white">
                               <div class="mx-auto max-w-7xl px-8">
-                                <div class="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
+                                <div class="grid grid-cols-2 gap-y-10 gap-x-32 py-16">
                                   <div class="grid grid-cols-2 grid-rows-1 gap-8 text-sm">
                                     <div v-for="(item, itemIdx) in category.featured" :key="item.name" class="group aspect-w-1 aspect-h-1 relative overflow-hidden rounded-md bg-gray-100" :class="[itemIdx === 0 ? 'aspect-w-2 col-span-2' : '']">
                                       <img :src="item.imageSrc" :alt="item.imageAlt" class="object-cover object-center group-hover:opacity-75">
