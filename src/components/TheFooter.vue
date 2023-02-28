@@ -85,21 +85,21 @@ const collections = [
   {
     name: 'SRP-S300',
     description: 'Direct Thermal Printer',
-    imageSrc: '../../../public/printer_1.jpeg',
+    imageSrc: '/printer_1.jpeg',
     imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
   {
     name: 'SRP-270',
     description: 'Receipt Printer',
-    imageSrc: '../../../public/printer_2.jpeg',
+    imageSrc: '/printer_2.jpeg',
     imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
   },
   {
     name: 'STP-103III',
     description: 'POS Printer',
-    imageSrc: '../../../public/printer_3.jpeg',
+    imageSrc: '/printer_3.jpeg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
@@ -178,7 +178,7 @@ const mobileMenuOpen = ref(false)
         <div class="border-t border-gray-200">
           <div class="pt-16 pb-20">
             <div class="md:flex md:justify-center">
-              <img src="../../../public/bixolon_orange_logo.jpeg" alt="" class="h-5 w-auto">
+              <img src="/bixolon_orange_logo.jpeg" alt="" class="h-5 w-auto">
             </div>
             <div class="mx-auto mt-16 max-w-5xl xl:grid xl:grid-cols-1 xl:gap-8">
               <div class="grid grid-cols-2 gap-8 xl:col-span-2">
