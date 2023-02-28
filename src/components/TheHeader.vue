@@ -63,18 +63,18 @@ const navigation = {
           imageSrc: '/kiosk_printer.png',
           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
-        {
-          name: 'Label Printers',
-          href: '/products',
-          imageSrc: '/label_printer.png',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
-        {
-          name: 'POS Printers',
-          href: '/products',
-          imageSrc: '/printer_1.jpeg',
-          imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
-        },
+        // {
+        //   name: 'Label Printers',
+        //   href: '/products',
+        //   imageSrc: '/label_printer.png',
+        //   imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+        // },
+        // {
+        //   name: 'POS Printers',
+        //   href: '/products',
+        //   imageSrc: '/printer_1.jpeg',
+        //   imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
+        // },
       ],
       sections: [
         [
@@ -82,7 +82,7 @@ const navigation = {
             id: 'shoes',
             name: 'Shoes & Accessories',
             items: [
-              { name: 'Sneakers', href: '#' },
+              { name: 'Sneakerss', href: '#' },
               { name: 'Boots', href: '#' },
               { name: 'Flats', href: '#' },
               { name: 'Sandals', href: '#' },
@@ -145,14 +145,14 @@ const navigation = {
     },
     {
       id: 'products_featured',
-      name: 'Products',
+      name: 'Solutions',
       featured: [
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: '/kiosk_printer.png',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
+        // {
+        //   name: 'New Arrivals',
+        //   href: '#',
+        //   imageSrc: '/kiosk_printer.png',
+        //   imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+        // },
         {
           name: 'Label Printers',
           href: '#',
@@ -407,7 +407,7 @@ const mobileMenuOpen = ref(false)
                                             {{ item.name }}
                                           </a>
                                           <p aria-hidden="true" class="mt-0.5 text-gray-700 sm:mt-1">
-                                            Shop now
+                                            Explore now
                                           </p>
                                         </div>
                                       </div>
