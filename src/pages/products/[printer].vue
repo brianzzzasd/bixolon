@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArchiveBoxIcon, EnvelopeIcon, StarIcon, VideoCameraIcon } from '@heroicons/vue/20/solid'
+import { DocumentIcon, EnvelopeIcon, FolderIcon, StarIcon, VideoCameraIcon } from '@heroicons/vue/20/solid'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 
 const props = defineProps<{ printer: string }>()
@@ -213,7 +213,7 @@ const license = {
               Video
             </button>
             <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-              <VideoCameraIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+              <FolderIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
               Download
             </button>
             <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
@@ -221,7 +221,7 @@ const license = {
               Contact
             </button>
             <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-              <ArchiveBoxIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+              <DocumentIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
               Brochure
             </button>
           </div>
