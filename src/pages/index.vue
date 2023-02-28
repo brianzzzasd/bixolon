@@ -213,15 +213,15 @@ const events = [
 const posts = [
   {
     id: 1,
-    title: 'Boost your conversion rate',
+    title: 'BIXOLON Announces New HQ Office in South Korea',
     href: '/blog',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'BIXOLON Co., Ltd., a leading global Mobile, Label and POS Printer manufacturer, today announced the relocation of its HQ office effective February 20, 2023. The move supports the company’s multi-year strategic growth plan and is located in a prominent area of Pangyo Techno Valley, South Korea.',
     imageUrl:
       '/blog_hq.jpeg',
-    date: 'Mar 16, 2020',
+    date: 'Feb 20, 2023',
     datetime: '2020-03-16',
-    category: { title: 'Product Launch', href: '/blog' },
+    category: { title: 'Corporate', href: '/blog' },
     author: {
       name: 'Liz Crouch',
       role: 'Marketing Manager',
@@ -232,13 +232,11 @@ const posts = [
   },
   {
     id: 2,
-    title: 'Boost your conversion rate',
+    title: 'BIXOLON Demonstrates its Complete Range of Retail Printing Solutions at EuroShop 2023',
     href: '/blog',
-    description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      '/blog_2.jpeg',
-    date: 'Mar 16, 2020',
+    description: 'EuroShop – (26.02.2023 – 02.03.2023, Dusseldorf, Germany) BIXOLON, the global manufacturer of advanced Receipt, Label and Mobile printers welcomes visitors onto stand #6A32 throughout the show, where it will be showcasing its sophisticated range of Retail printing solutions to the European market.',
+    imageUrl: '/blog_2.jpeg',
+    date: 'Feb 7, 2023',
     datetime: '2020-03-16',
     category: { title: 'Event', href: '/blog' },
     author: {
@@ -251,13 +249,11 @@ const posts = [
   },
   {
     id: 3,
-    title: 'Boost your conversion rate',
+    title: 'How to Efficiently Print Shipping Labels for e-commerce Businesses',
     href: '/blog',
-    description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      '/blog_3.jpeg',
-    date: 'Mar 16, 2020',
+    description: 'Printing online shipping labels has a significant role in the success of an e-commerce business. With several printing options to choose from, we understand it can be hard to know which is right for your business.',
+    imageUrl: '/blog_3.jpeg',
+    date: 'Jan 31, 2023',
     datetime: '2020-03-16',
     category: { title: 'Tech & Trend', href: '/blog' },
     author: {
